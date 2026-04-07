@@ -118,9 +118,9 @@
 }
 
 .lightLabel {
-  background: var(--c-white);
-  color: var(--c-blue);
-  box-shadow: 0 2px 12px rgba(26,90,150,0.1), inset 0 0 0 1.5px rgba(26,90,150,0.2);
+  background: linear-gradient(135deg, #d30234 0%, #a8022a 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(211,2,52,0.3), 0 1px 4px rgba(211,2,52,0.15);
 }
 
 /* ─── CARDS STACK ────────────────────────────────────────────────────── */
@@ -287,7 +287,7 @@
 }
 
 .programColumn .programButton {
-  margin-top: auto;
+  margin-top: 25px;
   align-self: flex-start;
 }
 
@@ -421,6 +421,20 @@
   .verticalDivider { display: none; }
 
   .dualProgramColumn { text-align: center; }
+
+  .programColumn {
+    text-align: center;
+    align-items: center;
+  }
+
+  .infoLine {
+    justify-content: center;
+  }
+
+  .programColumn .programButton,
+  .detailsColumn .programButton {
+    align-self: center;
+  }
 }
 
 /* ─── RESPONSIVE: MOBILE ─────────────────────────────────────────────── */
@@ -441,13 +455,14 @@
   }
 
   .sectionLabel {
-    width: 100%;
     justify-content: center;
-    padding-inline: 18px;
+    padding-inline: 28px;
   }
 
   .programButton {
     width: 100%;
     max-width: 220px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }

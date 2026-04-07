@@ -16,7 +16,7 @@ const inHouseClinics = [
           { label: "Location", value: "Wings Arena" },
           { label: "Ages", value: "4 - 8 years old" },
         ],
-        buttonText: "Learn To Play",
+        buttonText: "Register — Learn To Play",
       },
       {
         heading: "LTS",
@@ -28,7 +28,7 @@ const inHouseClinics = [
           { label: "Location", value: "Wings Arena" },
           { label: "Ages", value: "4 - 8 years old" },
         ],
-        buttonText: "Learn to Skate",
+        buttonText: "Register — Learn to Skate",
       },
     ],
   },
