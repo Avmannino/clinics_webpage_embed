@@ -1,10 +1,14 @@
 import "./App.css";
+import learnToSkateSpring from "./assets/learn-to-skate-spring.png";
+import erikNatesImage from "./assets/erik-nates.png";
+import kurtNicholsImage from "./assets/kurt-nichols.png";
+import wingsLogo from "./assets/wings-logo.png";
 
 const inHouseClinics = [
   {
     title: "Wings Arena | Learn To Skate & Learn to Play Programs",
     subtitle: "Spring Sessions",
-    image: "/src/assets/learn-to-skate-spring.png",
+    image: learnToSkateSpring,
     useSplitLayout: true,
     columns: [
       {
@@ -37,7 +41,7 @@ const inHouseClinics = [
 const partneredClinics = [
   {
     title: "Erik Nates Euro Hockey",
-    image: "/src/assets/erik-nates.png",
+    image: erikNatesImage,
     splitTwoPrograms: true,
     leftProgram: {
       heading: "Spring Break Clinic",
@@ -62,7 +66,7 @@ const partneredClinics = [
   },
   {
     title: "Kurt Nichols Power Skating",
-    image: "/src/assets/kurt-nichols.png",
+    image: kurtNicholsImage,
     redAccent: true,
     details: [
       { label: "Dates", value: "04/11/26 - 05/30/26" },
@@ -205,7 +209,7 @@ export default function App() {
       <main className="clinicsPage">
         <header className="heroHeader">
           <div className="heroHeaderInner">
-            <img src="/src/assets/wings-logo.png" alt="Wings Arena logo" className="heroLogo" />
+            <img src={wingsLogo} alt="Wings Arena logo" className="heroLogo" />
             <h1>Camps &amp; Clinics</h1>
           </div>
         </header>
