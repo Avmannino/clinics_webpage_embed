@@ -2,6 +2,7 @@ import "./App.css";
 import learnToSkateSpring from "./assets/learn-to-skate-spring.png";
 import erikNatesImage from "./assets/erik-nates.png";
 import kurtNicholsImage from "./assets/kurt-nichols.png";
+import gretzkyImage from "./assets/gretzky.jpg";
 import wingsLogo from "./assets/wings-logo.png";
 
 const inHouseClinics = [
@@ -21,6 +22,7 @@ const inHouseClinics = [
           { label: "Ages", value: "4 - 8 years old" },
         ],
         buttonText: "Register — Learn To Play",
+        buttonUrl: "https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=8390&GroupID=3995937",
       },
       {
         heading: "LTS",
@@ -33,6 +35,7 @@ const inHouseClinics = [
           { label: "Ages", value: "4 - 8 years old" },
         ],
         buttonText: "Register — Learn to Skate",
+        buttonUrl: "https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=8390&GroupID=3995941",
       },
     ],
   },
@@ -44,14 +47,16 @@ const partneredClinics = [
     image: erikNatesImage,
     splitTwoPrograms: true,
     leftProgram: {
-      heading: "Spring Break Clinic",
+      heading: "Summer Camp",
       details: [
-        { label: "Dates", value: "04/06 - 04/09" },
-        { label: "Time", value: "8:30 AM - 11:00 AM" },
+        { label: "Dates", value: "Various" },
+        { label: "Time", value: "Various" },
         { label: "Location", value: "Wings Arena" },
-        { label: "Ages", value: "7 - 15 years old" },
+        { label: "Ages", value: "Various" },
       ],
       buttonText: "Register Here",
+      buttonUrl: "https://nateshockey.com/connecticut-summer-camp/",
+      buttonNote: "Scroll down to the Wings Arena section",
     },
     rightProgram: {
       heading: "Spring 3v3 League",
@@ -62,6 +67,7 @@ const partneredClinics = [
         { label: "Ages", value: "Mites - Bantam" },
       ],
       buttonText: "Register Here",
+      buttonUrl: "https://nateshockey.com/ct-schedule-2021-darien-ice/",
     },
   },
   {
@@ -75,12 +81,26 @@ const partneredClinics = [
       { label: "Ages", value: "Birth Years - 2012, 2013, 2014" },
     ],
     buttonText: "Register Here",
+    buttonUrl: "https://kurtpowerskating.com/collections/spring/products/full-throttle-skating-mechanics-2014-2012",
+  },
+  {
+    title: "Gretzky Hockey School",
+    image: gretzkyImage,
+    imageContain: true,
+    details: [
+      { label: "Dates", value: "08/10 - 08/14" },
+      { label: "Time", value: "8:00 AM - 3:15 PM (Noon on Friday)" },
+      { label: "Location", value: "Wings Arena" },
+      { label: "Ages", value: "Various" },
+    ],
+    buttonText: "Register Here",
+    buttonUrl: "https://gretzkyhockeyschool.com/collections/camps/products/connecticut?variant=46744103321775",
   },
 ];
 
-function ImageFrame({ src, alt }) {
+function ImageFrame({ src, alt, contain = false }) {
   return (
-    <div className="imageFrame">
+    <div className={`imageFrame${contain ? " imageContain" : ""}`}>
       {src ? (
         <img
           src={src}
@@ -112,9 +132,17 @@ function InfoLines({ details, redAccent = false }) {
   );
 }
 
-function ProgramButton({ text, red = false }) {
+function ProgramButton({ text, url, red = false }) {
+  const cls = `programButton ${red ? "redButton" : ""}`;
+  if (url) {
+    return (
+      <a className={cls} href={url} target="_blank" rel="noopener noreferrer">
+        {text}
+      </a>
+    );
+  }
   return (
-    <button className={`programButton ${red ? "redButton" : ""}`} type="button">
+    <button className={cls} type="button">
       {text}
     </button>
   );
@@ -130,12 +158,12 @@ function StandardCard({ item }) {
 
       <div className="cardContent standardCardContent">
         <div className="posterColumn">
-          <ImageFrame src={item.image} alt={item.title} />
+          <ImageFrame src={item.image} alt={item.title} contain={item.imageContain} />
         </div>
 
         <div className="detailsColumn">
           <InfoLines details={item.details} redAccent={item.redAccent} />
-          <ProgramButton text={item.buttonText} red={item.redAccent} />
+          <ProgramButton text={item.buttonText} url={item.buttonUrl} red={item.redAccent} />
         </div>
       </div>
     </section>
@@ -160,7 +188,7 @@ function SplitLearnCard({ item }) {
               <div className="programColumn">
                 <h5 className="columnHeading">{column.heading}</h5>
                 <InfoLines details={column.details} />
-                <ProgramButton text={column.buttonText} />
+                <ProgramButton text={column.buttonText} url={column.buttonUrl} />
               </div>
 
               {index !== item.columns.length - 1 ? (
@@ -189,13 +217,16 @@ function SplitPartnerCard({ item }) {
           <div className="dualProgramColumn">
             <h4 className="dualProgramHeading">{item.leftProgram.heading}</h4>
             <InfoLines details={item.leftProgram.details} />
-            <ProgramButton text={item.leftProgram.buttonText} />
+            <ProgramButton text={item.leftProgram.buttonText} url={item.leftProgram.buttonUrl} />
+            {item.leftProgram.buttonNote ? (
+              <p className="buttonNote">{item.leftProgram.buttonNote}</p>
+            ) : null}
           </div>
 
           <div className="dualProgramColumn">
             <h4 className="dualProgramHeading">{item.rightProgram.heading}</h4>
             <InfoLines details={item.rightProgram.details} />
-            <ProgramButton text={item.rightProgram.buttonText} />
+            <ProgramButton text={item.rightProgram.buttonText} url={item.rightProgram.buttonUrl} />
           </div>
         </div>
       </div>

@@ -226,6 +226,12 @@
   display: block;
 }
 
+.imageFrame.imageContain {
+  aspect-ratio: 1 / 1;
+  max-width: 210px;
+  transform: translateY(-10px);
+}
+
 .imageFrame .placeholderText {
   position: absolute;
   inset: 0;
@@ -344,7 +350,20 @@
   color: #e0ecf8;
 }
 
+/* ─── BUTTON NOTE ────────────────────────────────────────────────────── */
+.buttonNote {
+  margin: 8px 0 0;
+  font-size: 0.78rem;
+  color: #90b8d8;
+  font-style: italic;
+}
+
 /* ─── PROGRAM BUTTON ─────────────────────────────────────────────────── */
+a.programButton {
+  display: inline-block;
+  text-decoration: none;
+}
+
 .programButton {
   margin-top: 22px;
   min-width: 148px;
