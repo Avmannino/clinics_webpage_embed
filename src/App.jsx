@@ -1,41 +1,43 @@
 import "./App.css";
-import learnToSkateSpring from "./assets/learn-to-skate-spring.png";
+import learnToSkateSummer from "./assets/learn-to-skate-summer.png";
 import erikNatesImage from "./assets/erik-nates.png";
-import kurtNicholsImage from "./assets/kurt-nichols.png";
 import gretzkyImage from "./assets/gretzky.jpg";
 import wingsLogo from "./assets/wings-logo.png";
 
 const inHouseClinics = [
   {
     title: "Wings Arena | Learn To Skate & Learn to Play Programs",
-    subtitle: "Spring Sessions",
-    image: learnToSkateSpring,
+    subtitle: "Summer Sessions",
+    image: learnToSkateSummer,
     useSplitLayout: true,
     columns: [
       {
         heading: "LTP",
         details: [
-          { label: "Dates", value: "03/14/26 - 06/13/26" },
-          { label: "Time", value: "Mondays 3:40PM - 4:40PM" },
-          { label: "", value: "Saturdays 12:20PM - 1:20PM" },
+          { label: "Start Date", value: "June 27, 2026" },
+          { label: "Duration", value: "8-week session, 60 min class" },
+          { label: "Saturdays", value: "9:40 AM - 10:40 AM" },
+          { label: "Sundays", value: "9:40 AM - 10:40 AM" },
           { label: "Location", value: "Wings Arena" },
-          { label: "Ages", value: "4 - 8 years old" },
+          { label: "Ages", value: "3 - 10 years old" },
+          { label: "Price", value: "$350 (1 class/week) | $525 (2 classes/week)" },
         ],
         buttonText: "Register — Learn To Play",
-        buttonUrl: "https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=8390&GroupID=3995937",
+        buttonUrl: "https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=8390&GroupID=4038153",
       },
       {
         heading: "LTS",
         details: [
-          { label: "Dates", value: "03/14/26 - 06/13/26" },
-          { label: "Time", value: "Mondays (Preschoolers) 1:20PM - 2:05PM" },
-          { label: "", value: "Fridays 3:15PM - 4:00PM" },
-          { label: "", value: "Saturdays 1:20PM - 2:05PM" },
+          { label: "Start Date", value: "June 27, 2026" },
+          { label: "Duration", value: "8-week session, 30 min class" },
+          { label: "Saturdays", value: "9:40 AM - 10:10 AM | 10:10 AM - 10:40 AM" },
+          { label: "Sundays", value: "9:40 AM - 10:10 AM | 10:10 AM - 10:40 AM" },
           { label: "Location", value: "Wings Arena" },
-          { label: "Ages", value: "4 - 8 years old" },
+          { label: "Ages", value: "3 - 10 years old" },
+          { label: "Price", value: "$250 (1 class/week) | $375 (2 classes/week)" },
         ],
         buttonText: "Register — Learn to Skate",
-        buttonUrl: "https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=8390&GroupID=3995941",
+        buttonUrl: "https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=8390&GroupID=4038152",
       },
     ],
   },
@@ -45,43 +47,15 @@ const partneredClinics = [
   {
     title: "Erik Nates Euro Hockey",
     image: erikNatesImage,
-    splitTwoPrograms: true,
-    leftProgram: {
-      heading: "Summer Camp",
-      details: [
-        { label: "Dates", value: "Various" },
-        { label: "Time", value: "Various" },
-        { label: "Location", value: "Wings Arena" },
-        { label: "Ages", value: "Various" },
-      ],
-      buttonText: "Register Here",
-      buttonUrl: "https://nateshockey.com/connecticut-summer-camp/",
-      buttonNote: "Scroll down to the Wings Arena section",
-    },
-    rightProgram: {
-      heading: "Spring 3v3 League",
-      details: [
-        { label: "Dates", value: "04/06 - 05/28" },
-        { label: "Time", value: "See registration for full schedule." },
-        { label: "Location", value: "Wings Arena" },
-        { label: "Ages", value: "Mites - Bantam" },
-      ],
-      buttonText: "Register Here",
-      buttonUrl: "https://nateshockey.com/ct-schedule-2021-darien-ice/",
-    },
-  },
-  {
-    title: "Kurt Nichols Power Skating",
-    image: kurtNicholsImage,
-    redAccent: true,
     details: [
-      { label: "Dates", value: "04/11/26 - 05/30/26" },
-      { label: "Times", value: "Saturdays: 5:00PM - 6:20PM" },
+      { label: "Dates", value: "Various" },
+      { label: "Time", value: "Various" },
       { label: "Location", value: "Wings Arena" },
-      { label: "Ages", value: "Birth Years - 2012, 2013, 2014" },
+      { label: "Ages", value: "Various" },
     ],
     buttonText: "Register Here",
-    buttonUrl: "https://kurtpowerskating.com/collections/spring/products/full-throttle-skating-mechanics-2014-2012",
+    buttonUrl: "https://nateshockey.com/connecticut-summer-camp/",
+    buttonNote: "Scroll down to the Wings Arena section",
   },
   {
     title: "Gretzky Hockey School",
@@ -164,6 +138,7 @@ function StandardCard({ item }) {
         <div className="detailsColumn">
           <InfoLines details={item.details} redAccent={item.redAccent} />
           <ProgramButton text={item.buttonText} url={item.buttonUrl} red={item.redAccent} />
+          {item.buttonNote ? <p className="buttonNote">{item.buttonNote}</p> : null}
         </div>
       </div>
     </section>
