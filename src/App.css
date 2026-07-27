@@ -350,6 +350,21 @@
   color: #e0ecf8;
 }
 
+.infoValue a {
+  color: #6fd3ff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.infoValue a:hover,
+.infoValue a:focus-visible {
+  color: #9fe3ff;
+}
+
+.infoValue a:visited {
+  color: #6fd3ff;
+}
+
 /* ─── BUTTON NOTE ────────────────────────────────────────────────────── */
 .buttonNote {
   margin: 8px 0 0;
