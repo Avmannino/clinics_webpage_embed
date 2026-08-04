@@ -350,6 +350,19 @@
   color: #e0ecf8;
 }
 
+.infoGroupHeading {
+  margin: 6px 0 0;
+  font-size: 0.78em;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--c-blue-lit);
+}
+
+.infoGroupHeading:first-child {
+  margin-top: 0;
+}
+
 .infoValue a {
   color: #6fd3ff;
   text-decoration: underline;
