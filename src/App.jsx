@@ -1,31 +1,10 @@
 import "./App.css";
-import tuneUpFlyer from "./assets/tune-up-flyer.png";
 import learnToSkateFall from "./assets/learn-to-skate-fall.png";
 import erikNatesImage from "./assets/erik-nates.png";
 import nycRGoaltendingImage from "./assets/miro.png";
 import wingsLogo from "./assets/wings-logo.png";
 
 const inHouseClinics = [
-  {
-    title: 'Pre-Season "Tune Up" Clinic',
-    image: tuneUpFlyer,
-    details: [
-      { label: "Dates", value: "Friday, 9/4 - Monday, 9/7" },
-      { label: "Location", value: "Wings Arena" },
-      { heading: "Friday 9/4 - Sunday 9/6" },
-      { label: "Mites", value: "12:30 PM - 2:00 PM" },
-      { label: "Squirts", value: "2:10 PM - 3:40 PM" },
-      { label: "Peewee", value: "3:50 PM - 5:20 PM" },
-      { label: "Bantam", value: "5:30 PM - 7:00 PM" },
-      { heading: "Monday 9/7" },
-      { label: "Mites", value: "12:30 PM - 2:00 PM" },
-      { label: "Squirts", value: "3:20 PM - 4:50 PM" },
-      { label: "Peewee", value: "5:00 PM - 6:30 PM" },
-      { label: "Bantam", value: "6:40 PM - 8:10 PM" },
-    ],
-    buttonText: "Register Here",
-    buttonUrl: "https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=8390&GroupID=4098427",
-  },
   {
     title: "Wings Arena | Learn To Skate & Learn to Play Programs",
     subtitle: "Fall Sessions",
