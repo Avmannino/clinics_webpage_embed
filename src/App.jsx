@@ -70,7 +70,7 @@ const partneredClinics = [
       { label: "Ages", value: "Various" },
     ],
     buttonText: "Register Here",
-    buttonUrl: "https://nateshockey.com/connecticut-summer-camp/",
+    buttonUrl: "https://nateshockey.com/clinics/",
     buttonNote: "Scroll down to the Wings Arena section",
   },
   {
