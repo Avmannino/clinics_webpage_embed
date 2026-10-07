@@ -71,7 +71,6 @@ const partneredClinics = [
     ],
     buttonText: "Register Here",
     buttonUrl: "https://nateshockey.com/clinics/",
-    buttonNote: "Scroll down to the Wings Arena section",
   },
   {
     title: "NYC R Goaltending",
