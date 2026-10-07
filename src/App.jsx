@@ -1,10 +1,25 @@
 import "./App.css";
+import adultClassesImage from "./assets/classes.jpg";
 import learnToSkateFall from "./assets/learn-to-skate-fall.png";
 import erikNatesImage from "./assets/erik-nates.png";
 import nycRGoaltendingImage from "./assets/miro.png";
 import wingsLogo from "./assets/wings-logo.png";
 
 const inHouseClinics = [
+  {
+    title: "Adult Hockey Classes",
+    image: adultClassesImage,
+    details: [
+      { label: "Dates", value: "Sept 8 - Nov 10, 2026" },
+      { label: "Day", value: "Tuesdays" },
+      { label: "Time", value: "7:25 AM - 8:25 AM" },
+      { label: "Location", value: "Wings Arena" },
+      { label: "Levels", value: "All skill + ability levels" },
+      { label: "Price", value: "$450 (10-class session) | $50 drop-in (if space permits)" },
+    ],
+    buttonText: "Register Here",
+    buttonUrl: "https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=8390&GroupID=4104306",
+  },
   {
     title: "Wings Arena | Learn To Skate & Learn to Play Programs",
     subtitle: "Fall Sessions",
