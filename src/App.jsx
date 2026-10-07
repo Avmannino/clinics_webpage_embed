@@ -1,9 +1,7 @@
 import "./App.css";
 import tuneUpFlyer from "./assets/tune-up-flyer.png";
 import learnToSkateFall from "./assets/learn-to-skate-fall.png";
-import learnToSkateSummer from "./assets/learn-to-skate-summer.png";
 import erikNatesImage from "./assets/erik-nates.png";
-import gretzkyImage from "./assets/gretzky.jpg";
 import nycRGoaltendingImage from "./assets/miro.png";
 import wingsLogo from "./assets/wings-logo.png";
 
@@ -64,42 +62,6 @@ const inHouseClinics = [
       },
     ],
   },
-  {
-    title: "Wings Arena | Learn To Skate & Learn to Play Programs",
-    subtitle: "Summer Sessions",
-    image: learnToSkateSummer,
-    useSplitLayout: true,
-    columns: [
-      {
-        heading: "LTP",
-        details: [
-          { label: "Start Date", value: "June 27, 2026" },
-          { label: "Duration", value: "8-week session, 60 min class" },
-          { label: "Saturdays", value: "9:40 AM - 10:40 AM" },
-          { label: "Sundays", value: "9:40 AM - 10:40 AM" },
-          { label: "Location", value: "Wings Arena" },
-          { label: "Ages", value: "3 - 10 years old" },
-          { label: "Price", value: "$350 (1 class/week) | $525 (2 classes/week)" },
-        ],
-        buttonText: "Register — Learn To Play",
-        buttonUrl: "https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=8390&GroupID=4038153",
-      },
-      {
-        heading: "LTS",
-        details: [
-          { label: "Start Date", value: "June 27, 2026" },
-          { label: "Duration", value: "8-week session, 30 min class" },
-          { label: "Saturdays", value: "9:40 AM - 10:10 AM | 10:10 AM - 10:40 AM" },
-          { label: "Sundays", value: "9:40 AM - 10:10 AM | 10:10 AM - 10:40 AM" },
-          { label: "Location", value: "Wings Arena" },
-          { label: "Ages", value: "3 - 10 years old" },
-          { label: "Price", value: "$250 (1 class/week) | $375 (2 classes/week)" },
-        ],
-        buttonText: "Register — Learn to Skate",
-        buttonUrl: "https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=8390&GroupID=4038152",
-      },
-    ],
-  },
 ];
 
 const partneredClinics = [
@@ -115,19 +77,6 @@ const partneredClinics = [
     buttonText: "Register Here",
     buttonUrl: "https://nateshockey.com/connecticut-summer-camp/",
     buttonNote: "Scroll down to the Wings Arena section",
-  },
-  {
-    title: "Gretzky Hockey School",
-    image: gretzkyImage,
-    imageContain: true,
-    details: [
-      { label: "Dates", value: "08/10 - 08/14" },
-      { label: "Time", value: "8:00 AM - 3:15 PM (Noon on Friday)" },
-      { label: "Location", value: "Wings Arena" },
-      { label: "Ages", value: "Various" },
-    ],
-    buttonText: "Register Here",
-    buttonUrl: "https://gretzkyhockeyschool.com/collections/camps/products/connecticut?variant=46744103321775",
   },
   {
     title: "NYC R Goaltending",
