@@ -232,6 +232,27 @@
   transform: translateY(-10px);
 }
 
+.standardCardContent.videoCardContent { grid-template-columns: minmax(0, 380px) 1fr; }
+
+.imageFrame.videoFrame {
+  max-width: 380px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.imageFrame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 12px;
+}
+
 .imageFrame .placeholderText {
   position: absolute;
   inset: 0;
@@ -247,7 +268,7 @@
 }
 
 .imageFrame.placeholderMode .placeholderText,
-.imageFrame:not(:has(img)) .placeholderText {
+.imageFrame:not(:has(img, video)) .placeholderText {
   display: flex;
 }
 
@@ -449,10 +470,13 @@ a.programButton {
 /* ─── RESPONSIVE: TABLET ─────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .standardCardContent,
+  .standardCardContent.videoCardContent,
   .splitLearnCardContent,
   .splitPartnerCardContent {
     grid-template-columns: 1fr;
   }
+
+  .buttonRow { justify-content: center; }
 
   .posterColumn { justify-content: center; }
 

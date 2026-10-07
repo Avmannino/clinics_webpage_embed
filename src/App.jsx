@@ -3,6 +3,7 @@ import adultClassesImage from "./assets/classes.jpg";
 import learnToSkateFall from "./assets/learn-to-skate-fall.png";
 import erikNatesImage from "./assets/erik-nates.png";
 import nycRGoaltendingImage from "./assets/miro.png";
+import hockeyLabVideo from "./assets/hockeylab.mp4";
 import wingsLogo from "./assets/wings-logo.png";
 
 const inHouseClinics = [
@@ -94,6 +95,21 @@ const partneredClinics = [
     buttonText: "Visit Website",
     buttonUrl: "https://www.nycrgoaltending.com/",
   },
+  {
+    title: "The Hockey Lab",
+    video: hockeyLabVideo,
+    details: [
+      { label: "Session", value: "Fall Clinic" },
+      { label: "Dates", value: "Sept 4 - Oct 23, 2026" },
+      { label: "Day", value: "Fridays" },
+      { label: "Time", value: "9:30 PM - 10:30 PM" },
+      { label: "Location", value: "Wings Arena" },
+    ],
+    buttonText: "Register Here",
+    buttonUrl: "https://thehockeylab.io/register",
+    secondaryButtonText: "Visit Website",
+    secondaryButtonUrl: "https://thehockeylab.io/",
+  },
 ];
 
 function ImageFrame({ src, alt, contain = false }) {
@@ -110,6 +126,14 @@ function ImageFrame({ src, alt, contain = false }) {
         />
       ) : null}
       <div className="placeholderText">Image Placeholder</div>
+    </div>
+  );
+}
+
+function VideoFrame({ src, title }) {
+  return (
+    <div className="imageFrame videoFrame">
+      <video src={src} title={title} autoPlay muted loop playsInline controls preload="metadata" />
     </div>
   );
 }
@@ -160,14 +184,23 @@ function StandardCard({ item }) {
       </h3>
       <div className="titleUnderline" />
 
-      <div className="cardContent standardCardContent">
+      <div className={`cardContent standardCardContent${item.video ? " videoCardContent" : ""}`}>
         <div className="posterColumn">
-          <ImageFrame src={item.image} alt={item.title} contain={item.imageContain} />
+          {item.video ? (
+            <VideoFrame src={item.video} title={item.title} />
+          ) : (
+            <ImageFrame src={item.image} alt={item.title} contain={item.imageContain} />
+          )}
         </div>
 
         <div className="detailsColumn">
           <InfoLines details={item.details} redAccent={item.redAccent} />
-          <ProgramButton text={item.buttonText} url={item.buttonUrl} red={item.redAccent} />
+          <div className="buttonRow">
+            <ProgramButton text={item.buttonText} url={item.buttonUrl} red={item.redAccent} />
+            {item.secondaryButtonText ? (
+              <ProgramButton text={item.secondaryButtonText} url={item.secondaryButtonUrl} />
+            ) : null}
+          </div>
           {item.buttonNote ? <p className="buttonNote">{item.buttonNote}</p> : null}
         </div>
       </div>
