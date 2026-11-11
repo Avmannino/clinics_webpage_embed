@@ -9,14 +9,31 @@ const partneredClinics = [
   {
     title: "Erik Nates Euro Hockey",
     image: erikNatesImage,
-    details: [
-      { label: "Dates", value: "Various" },
-      { label: "Time", value: "Various" },
-      { label: "Location", value: "Wings Arena" },
-      { label: "Ages", value: "Various" },
-    ],
-    buttonText: "Register Here",
-    buttonUrl: "https://nateshockey.com/clinics/",
+    splitTwoPrograms: true,
+    leftProgram: {
+      heading: "Thanksgiving Clinic",
+      details: [
+        { label: "Dates", value: "Nov 27, 28 & 29, 2026" },
+        { label: "Time", value: "8:30 AM - 11:00 AM" },
+        { label: "Location", value: "Wings Arena" },
+        { label: "Ages", value: "7 - 16" },
+        { label: "Price", value: "$430 (all 3 days) | $150 (daily rate)" },
+      ],
+      buttonText: "Register Here",
+      buttonUrl: "https://nateshockey.com/clinics/",
+    },
+    rightProgram: {
+      heading: "Holiday Clinic – Skills & Small Games",
+      details: [
+        { label: "Dates", value: "Dec 28, 29, 30 & 31, 2026" },
+        { label: "Time", value: "8:30 AM - 11:00 AM" },
+        { label: "Location", value: "Wings Arena" },
+        { label: "Ages", value: "7 - 16" },
+        { label: "Price", value: "$575 (all 4 days) | $150 (daily rate)" },
+      ],
+      buttonText: "Register Here",
+      buttonUrl: "https://nateshockey.com/clinics/",
+    },
   },
   {
     title: "The Hockey Lab",
