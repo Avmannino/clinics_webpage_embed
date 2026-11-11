@@ -20,7 +20,7 @@ const partneredClinics = [
         { label: "Price", value: "$430 (all 3 days) | $150 (daily rate)" },
       ],
       buttonText: "Register Here",
-      buttonUrl: "https://nateshockey.com/clinics/",
+      buttonUrl: "https://nateshockey.com/holiday-clinics/",
     },
     rightProgram: {
       heading: "Holiday Clinic – Skills & Small Games",
@@ -32,7 +32,7 @@ const partneredClinics = [
         { label: "Price", value: "$575 (all 4 days) | $150 (daily rate)" },
       ],
       buttonText: "Register Here",
-      buttonUrl: "https://nateshockey.com/clinics/",
+      buttonUrl: "https://nateshockey.com/holiday-clinics/",
     },
   },
   {
