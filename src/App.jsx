@@ -2,7 +2,6 @@ import "./App.css";
 import adultClassesImage from "./assets/classes.jpg";
 import learnToSkateFall from "./assets/learn-to-skate-fall.png";
 import erikNatesImage from "./assets/erik-nates.png";
-import nycRGoaltendingImage from "./assets/miro.png";
 import hockeyLabVideo from "./assets/hockeylab.mp4";
 import wingsLogo from "./assets/wings-logo.png";
 
@@ -71,28 +70,6 @@ const partneredClinics = [
     ],
     buttonText: "Register Here",
     buttonUrl: "https://nateshockey.com/clinics/",
-  },
-  {
-    title: "NYC R Goaltending",
-    image: nycRGoaltendingImage,
-    imageContain: true,
-    details: [
-      { label: "Dates", value: "Various" },
-      { label: "Time", value: "Various" },
-      { label: "Location", value: "Wings Arena" },
-      { label: "Ages", value: "Various" },
-      { label: "Email", value: "nycrgoaltending@gmail.com" },
-      {
-        label: "Instagram",
-        value: (
-          <a href="https://www.instagram.com/nyc_r_goaltending" target="_blank" rel="noopener noreferrer">
-            @nyc_r_goaltending
-          </a>
-        ),
-      },
-    ],
-    buttonText: "Visit Website",
-    buttonUrl: "https://www.nycrgoaltending.com/",
   },
   {
     title: "The Hockey Lab",
