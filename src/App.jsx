@@ -99,7 +99,7 @@ const partneredClinics = [
     video: hockeyLabVideo,
     details: [
       { label: "Session", value: "Fall Clinic" },
-      { label: "Dates", value: "Sept 4 - Oct 23, 2026" },
+      { label: "Dates", value: "Dec 4, 11, 18, 2026 | Jan 8, 15, 22, 29 | Feb 5, 2027" },
       { label: "Day", value: "Fridays" },
       { label: "Time", value: "9:30 PM - 10:30 PM" },
       { label: "Location", value: "Wings Arena" },
