@@ -1,47 +1,9 @@
 import "./App.css";
-import learnToSkateFall from "./assets/learn-to-skate-fall.png";
 import erikNatesImage from "./assets/erik-nates.png";
 import hockeyLabVideo from "./assets/hockeylab.mp4";
 import wingsLogo from "./assets/wings-logo.png";
 
-const inHouseClinics = [
-  {
-    title: "Wings Arena | Learn To Skate & Learn to Play Programs",
-    subtitle: "Fall Sessions",
-    image: learnToSkateFall,
-    useSplitLayout: true,
-    columns: [
-      {
-        heading: "LTP",
-        details: [
-          { label: "Start Date", value: "Sept 8, 2026 (Tue) | Sept 11, 2026 (Fri)" },
-          { label: "Duration", value: "10-week session, 60 min class" },
-          { label: "Tuesdays", value: "3:20 PM - 4:20 PM" },
-          { label: "Fridays", value: "3:55 PM - 4:55 PM" },
-          { label: "Location", value: "Wings Arena" },
-          { label: "Ages", value: "3 - 10 years old" },
-          { label: "Price", value: "$495 (1 class/week) | $740 (2 classes/week)" },
-        ],
-        buttonText: "Register — Learn To Play",
-        buttonUrl: "https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=8390&GroupID=4084756#SelectRegistrationType",
-      },
-      {
-        heading: "LTS",
-        details: [
-          { label: "Start Date", value: "Sept 8, 2026 (Tue) | Sept 11, 2026 (Fri)" },
-          { label: "Duration", value: "10-week session, 30 min class" },
-          { label: "Tuesdays", value: "3:20 PM - 3:50 PM | 3:50 PM - 4:20 PM" },
-          { label: "Fridays", value: "3:55 PM - 4:25 PM | 4:25 PM - 4:55 PM" },
-          { label: "Location", value: "Wings Arena" },
-          { label: "Ages", value: "3 - 10 years old" },
-          { label: "Price", value: "$350 (1 class/week) | $525 (2 classes/week)" },
-        ],
-        buttonText: "Register — Learn to Skate",
-        buttonUrl: "https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=8390&GroupID=4084755#SelectRegistrationType",
-      },
-    ],
-  },
-];
+const inHouseClinics = [];
 
 const partneredClinics = [
   {
@@ -244,21 +206,25 @@ export default function App() {
           </div>
         </header>
 
-        <section className="sectionLabelWrap">
-          <div className="sectionLabel">In-House Clinics</div>
-        </section>
+        {inHouseClinics.length > 0 ? (
+          <>
+            <section className="sectionLabelWrap">
+              <div className="sectionLabel">In-House Clinics</div>
+            </section>
 
-        <div className="cardsStack">
-          {inHouseClinics.map((item) =>
-            item.useSplitLayout ? (
-              <SplitLearnCard key={`${item.title}-${item.subtitle}`} item={item} />
-            ) : (
-              <StandardCard key={`${item.title}-${item.subtitle}`} item={item} />
-            )
-          )}
-        </div>
+            <div className="cardsStack">
+              {inHouseClinics.map((item) =>
+                item.useSplitLayout ? (
+                  <SplitLearnCard key={`${item.title}-${item.subtitle}`} item={item} />
+                ) : (
+                  <StandardCard key={`${item.title}-${item.subtitle}`} item={item} />
+                )
+              )}
+            </div>
+          </>
+        ) : null}
 
-        <section className="sectionLabelWrap partneredLabelWrap">
+        <section className={`sectionLabelWrap${inHouseClinics.length > 0 ? " partneredLabelWrap" : ""}`}>
           <div className="sectionLabel lightLabel">Partnered Clinics</div>
         </section>
 
